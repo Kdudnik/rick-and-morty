@@ -1,0 +1,114 @@
+.characters {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--theme-card-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 650px) {
+    .card {
+        display: flex;
+        flex-basis: 600px;
+        /* height: 220px; */
+    }
+}
+
+.card__avatar__wrapper {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 650px) {
+    .card__avatar__wrapper {
+        height: 220px;
+        width: 220px;
+    }
+}
+
+.card__avatar {
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.card:hover .card__avatar {
+    transform: scale(1.1);
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+    font-family: -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    color: var(--theme-main-color);
+}
+
+.character > * {
+    flex: 1 1 0%;
+}
+
+.info {
+    font-size: 16px;
+}
+
+.info__title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.info__status.status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status[data-health="alive"] .status__dot {
+    background-color: var(--status-alive);
+}
+
+.status[data-health="dead"] .status__dot {
+    background-color: var(--status-dead);
+}
+
+.status[data-health="unknown"] .status__dot {
+    background-color: var(--status-unknown);
+}
+
+.status__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.location__title {
+    font-size: 16px;
+    color: var(--theme-additional-color);
+}
+
+.origin {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.origin__title {
+    font-size: 16px;
+    color: var(--theme-additional-color);
+}

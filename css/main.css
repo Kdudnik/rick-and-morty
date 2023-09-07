@@ -1,8 +1,33 @@
+@import url(./variables.css);
+@import url(./characters.css);
+
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../images/bg.jpg);
-    background-size: contain;
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    background-color: var(--theme-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 50px;
 }

@@ -1,0 +1,12 @@
+:root {
+    --status-dead: #d63d2e;
+    --status-alive: #55cc44;
+    --status-unknown: #9e9e9e;
+}
+
+body[data-theme="dark"] {
+    --theme-bg-color: #262C3A;
+    --theme-card-bg-color: #3c3e44;
+    --theme-main-color: #ffffff;
+    --theme-additional-color: #9e9e9e;
+}

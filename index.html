@@ -9,7 +9,16 @@
   <title>Rick and Morty | Find your character</title>
 </head>
 
-<body>
+<body data-theme="dark">
+  <div class="container">
+    <div id="app">
+      <form class="search" action="">
+        <input type="search" name="characterName" placeholder="Search Character">
+        <button type="submit">Search</button>
+      </form>
+      <div class="characters"></div>
+    </div>
+  </div>
 
   <script type="module" src="./js/main.js"></script>
 </body>
