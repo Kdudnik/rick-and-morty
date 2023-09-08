@@ -1,5 +1,6 @@
 @import url(./variables.css);
 @import url(./characters.css);
+@import url(./search.css);
 
 body {
     margin: 0;
@@ -24,10 +25,16 @@ a {
     color: inherit;
 }
 
+#app {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
 .container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
-    padding-top: 50px;
 }

@@ -1,9 +1,10 @@
 import { generateCharacter } from "./utils/generateCharacter";
+import "./search.js"
+import { clearField } from "./search.js";
 
 const app = document.querySelector('#app');
 const charactersList = app.querySelector('.characters');
 const searchForm = app.querySelector('.search');
-
 
 let foundedCharacters = []
 
@@ -14,6 +15,7 @@ searchForm.addEventListener('submit', async (event) => {
     foundedCharacters = await searchCharacters(inputValue);
 
     charactersList.innerHTML = ""
+    clearField()
 
     foundedCharacters.forEach(foundedCharacter => {
         generateCharacter(foundedCharacter, charactersList)
