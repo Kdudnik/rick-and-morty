@@ -1,6 +1,7 @@
 @import url(./variables.css);
-@import url(./characters.css);
+@import url(./card.css);
 @import url(./search.css);
+@import url(./utils.css);
 
 body {
     margin: 0;
@@ -8,6 +9,7 @@ body {
     display: flex;
     /* justify-content: center; */
     background-color: var(--theme-bg-color);
+    font-family: -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 h1,
@@ -25,16 +27,24 @@ a {
     color: inherit;
 }
 
-#app {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 50px 0;
-}
-
 .container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 50px 0;
+}
+
+.characters {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
