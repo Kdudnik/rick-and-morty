@@ -1,0 +1,3 @@
+.filter__el[data-filter-active="true"] {
+    color: red;
+}

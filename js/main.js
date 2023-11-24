@@ -1,5 +1,7 @@
 import { generateCharacter } from "./utils/generateCharacter";
+import { generateError } from "./utils/generateError";
 import "./search.js"
+import "./filter.js"
 import { clearField } from "./search.js";
 
 const app = document.querySelector('#app');
@@ -12,7 +14,14 @@ searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     foundedCharacters = [];
     const inputValue = event.target.elements.characterName.value;
-    foundedCharacters = await searchCharacters(inputValue);
+    const result = await searchCharacters(inputValue);
+
+    if(Array.isArray(result)) {
+        foundedCharacters = result;
+    } else {
+        generateError(result, charactersList);
+        return
+    }
 
     charactersList.innerHTML = ""
     clearField()
@@ -26,20 +35,16 @@ const baseApi = new URL('https://rickandmortyapi.com/api');
 const charactersApi = new URL(`${baseApi.href}/character/?name`);
 
 const searchCharacters = async function (name) {
-    let result = [];
+    let result = null;
     charactersApi.searchParams.set('name', name);
 
     await fetch(charactersApi).then((response) => {
         return response.json()
     }).then(data => {
-        result = data.results;
+        result = data.results ?? data.error;
     });
 
     return result;
 }
 
-const charactersCardsTmpl = function (characterName) {
-    return `
-    <div>${characterName}</div>
-  `
-}
+export { foundedCharacters, charactersList }

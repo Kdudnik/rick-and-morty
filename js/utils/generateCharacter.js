@@ -1,4 +1,4 @@
-const generateCharacter = function (characterObj, generateTo) {
+const generateCharacter = (characterObj, generateTo) => {
     // BEM - block card, element - card__link, mod - list list--second, 
     // <a class="link link--green card__link">
     const tmpl = `
