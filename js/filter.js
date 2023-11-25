@@ -7,6 +7,9 @@ let activeFilter = null
 filters.addEventListener('click', event => {
     if(event.target.tagName !== "A") return
     charactersList.innerHTML = ""
+
+    // TODO: create a function to remove active class from all filters
+    // If filter is active, then remove it
     if(event.target.dataset.filterActive === "true") {
         event.target.dataset.filterActive = ""
         foundedCharacters.forEach(foundedCharacter => {
