@@ -24,7 +24,7 @@ filters.addEventListener('click', event => {
 
 const setActiveFilter = function(newActiveFilterEl) {
     
-    if(newActiveFilterEl.innerHTML === activeFilter) {
+    if(newActiveFilterEl.dataset.filter === activeFilter) {
         activeFilter = ''
         newActiveFilterEl.classList.remove('filter--active')
         // regenerate all characters
@@ -33,5 +33,5 @@ const setActiveFilter = function(newActiveFilterEl) {
         })
         return
     }
-    activeFilter = newActiveFilterEl.innerHTML
+    activeFilter = newActiveFilterEl.dataset.filter
 }
