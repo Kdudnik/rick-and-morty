@@ -1,4 +1,5 @@
 @import url(./variables.css);
+@import url(./header.css);
 @import url(./card.css);
 @import url(./search.css);
 @import url(./utils.css);
@@ -7,8 +8,6 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    /* justify-content: center; */
     background-color: var(--theme-bg-color);
     font-family: -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -39,7 +38,7 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 50px 0;
+    padding: 125px 0;
     gap: 50px 0;
 }
 
@@ -48,4 +47,8 @@ a {
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
+}
+
+.is--hidden {
+    display: none;
 }

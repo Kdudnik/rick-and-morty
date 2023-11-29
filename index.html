@@ -10,17 +10,24 @@
 </head>
 
 <body data-theme="dark">
-  <div class="container">
-    <div id="app">
-      <div class="filters">
-        <a href="#" class="filters__el" data-filter="alive">Alive</a>
-        <a href="#" class="filters__el" data-filter="dead">Dead</a>
-        <a href="#" class="filters__el" data-filter="unknown">Unknown</a>
-      </div>
+  <header>
+    <nav>
+      <a href="#" data-navigation="filters">FILTER</a>
       <form class="search" autocomplete="off" action="">
         <input class="search__field" type="search" name="characterName" placeholder="Search Character...">
         <button class="search__btn" type="submit">Find</button>
       </form>
+      <a href="#">FAVOURITE</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div id="app">
+      <div class="filters is--hidden">
+        <a href="#" class="filters__el" data-filter="alive">Alive</a>
+        <a href="#" class="filters__el" data-filter="dead">Dead</a>
+        <a href="#" class="filters__el" data-filter="unknown">Unknown</a>
+      </div>
       <div class="characters"></div>
     </div>
   </div>

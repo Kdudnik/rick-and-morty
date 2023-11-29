@@ -1,4 +1,4 @@
-import { foundedCharacters, charactersList } from "./main"
+import { foundedCharacters, charactersList } from "./header.js"
 import { generateCharacter } from "./utils/generateCharacter"
 
 const filters = document.querySelector('.filters')
@@ -35,3 +35,5 @@ const setActiveFilter = function(newActiveFilterEl) {
     }
     activeFilter = newActiveFilterEl.dataset.filter
 }
+
+export { filters }

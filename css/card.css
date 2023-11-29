@@ -1,5 +1,5 @@
 .card {
-    background-color: var(--theme-card-bg-color);
+    background-color: var(--theme-main-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 15px;
     overflow: hidden;
@@ -8,7 +8,7 @@
     flex-basis: 600px;
     gap: 15px;
     font-weight: 500;
-    color: var(--theme-main-color);
+    color: var(--theme-main-text-color);
     position: relative;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .card__row .title {
-    color: var(--theme-additional-color);
+    color: var(--theme-additional-text-color);
 }
 
 /* STATUS BLOCK */
