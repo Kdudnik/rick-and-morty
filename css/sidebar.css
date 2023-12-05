@@ -1,0 +1,61 @@
+sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--theme-main-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    transform: translateX(-1000px);
+}
+
+.sidebar--active {
+    animation: showSidebar .5s forwards;
+}
+
+.sidebar--hidden {
+    animation: hideSidebar .5s forwards;
+}
+
+.filters {
+    padding-top: 125px;
+    padding-left: 50px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.filter__title {
+    color: var(--theme-main-text-color);
+    font-size: 20px;
+    text-align: left;
+    font-family: inherit;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.filter__title svg {
+    padding-top: 2px;
+    transition: .5s;
+}
+
+.filter__title.filter__title--active svg {
+    transform: rotate(180deg);
+}
+
+.filter__list {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter__list__el button /* TOASK: seems like a bad idea */ {
+    font-size: 16px;
+    font-family: inherit;
+}

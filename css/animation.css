@@ -1,0 +1,19 @@
+@keyframes showSidebar {
+    from {
+        transform: translateX(-1000px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideSidebar {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-1000px);
+    }
+}

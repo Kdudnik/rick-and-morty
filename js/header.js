@@ -2,11 +2,11 @@ import { generateCharacter } from "./utils/generateCharacter";
 import { generateError } from "./utils/generateError";
 import { clearField } from "./search.js";
 import { searchCharacters } from "./api.js";
-import { filters } from "./filter.js";
 
 const charactersList = document.querySelector('.characters');
 const searchForm = document.querySelector('.search');
 const filterBtn = document.querySelector('[data-navigation="filters"]')
+const sidebar = document.querySelector('sidebar')
 
 let foundedCharacters = []
 
@@ -32,7 +32,14 @@ searchForm.addEventListener('submit', async (event) => {
 });
 
 filterBtn.addEventListener('click', () => {
-    filters.classList.toggle('is--hidden')
+    if(sidebar.classList.contains('sidebar--active')) {
+        sidebar.classList.remove('sidebar--active')
+        sidebar.classList.add('sidebar--hidden')
+    }
+    else {
+        sidebar.classList.remove('sidebar--hidden')
+        sidebar.classList.add('sidebar--active')
+    }
 })
 
 export { charactersList, foundedCharacters }

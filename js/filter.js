@@ -35,5 +35,3 @@ const setActiveFilter = function(newActiveFilterEl) {
     }
     activeFilter = newActiveFilterEl.dataset.filter
 }
-
-export { filters }
