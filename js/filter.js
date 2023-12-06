@@ -35,3 +35,10 @@ const setActiveFilter = function(newActiveFilterEl) {
     }
     activeFilter = newActiveFilterEl.dataset.filter
 }
+
+filters.addEventListener('click', (event) => {
+    if(event.target.dataset.title !== "filter") return
+
+    const triggeredFilter = event.target.closest('.filter')
+    triggeredFilter.classList.toggle('filter--active')
+})

@@ -10,11 +10,11 @@ sidebar {
 }
 
 .sidebar--active {
-    animation: showSidebar .5s forwards;
+    animation: showSidebar .5s forwards ease-out;
 }
 
 .sidebar--hidden {
-    animation: hideSidebar .5s forwards;
+    animation: hideSidebar .5s forwards ease-in;
 }
 
 .filters {
@@ -44,15 +44,20 @@ sidebar {
     transition: .5s;
 }
 
-.filter__title.filter__title--active svg {
+.filter--active .filter__title svg {
     transform: rotate(180deg);
+    padding-top: 0;
 }
 
 .filter__list {
     padding-left: 10px;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px;
+}
+
+.filter--active .filter__list {
+    display: flex;
 }
 
 .filter__list__el button /* TOASK: seems like a bad idea */ {
