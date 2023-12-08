@@ -1,10 +1,12 @@
 import { generateCharacter } from "./utils/generateCharacter";
 import "./search.js"
+import { setClipboardEvent } from "./clipboard.js"
 import { clearField } from "./search.js";
 
 const app = document.querySelector('#app');
 const charactersList = app.querySelector('.characters');
 const searchForm = app.querySelector('.search');
+const clipboardEls = app.querySelectorAll('[data-clipboard=""]')
 
 let foundedCharacters = []
 
@@ -20,6 +22,7 @@ searchForm.addEventListener('submit', async (event) => {
     foundedCharacters.forEach(foundedCharacter => {
         generateCharacter(foundedCharacter, charactersList)
     })
+    setClipboardEvent()
 });
 
 const baseApi = new URL('https://rickandmortyapi.com/api');

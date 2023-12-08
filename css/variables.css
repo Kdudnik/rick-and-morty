@@ -3,6 +3,7 @@
     --status-dead: #d63d2e;
     --status-alive: #55cc44;
     --status-unknown: #9e9e9e;
+    --main-font: -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body[data-theme="dark"] {

@@ -1,7 +1,7 @@
 @import url(./variables.css);
 @import url(./card.css);
 @import url(./search.css);
-@import url(./utils.css);
+@import url(./animations.css);
 
 body {
     margin: 0;
@@ -9,7 +9,7 @@ body {
     display: flex;
     /* justify-content: center; */
     background-color: var(--theme-bg-color);
-    font-family: -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--main-font);
 }
 
 h1,
@@ -47,4 +47,25 @@ a {
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+[data-clipboard=""] .card__link {
+    cursor: pointer;
+}
+
+.clipboard-modal {
+    pointer-events: none;
+    position: absolute;
+    bottom: 150px;
+    background-color: var(--theme-main-color);
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 12px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+    opacity: 0;
+}
+
+.clipboard-modal--active {
+    animation: showClipboardModal 1s linear;
 }
